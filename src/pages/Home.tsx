@@ -1,10 +1,12 @@
 import ShapeGrid from "../components/Galexy/ShapeGrid"
 import Header from "../components/Header/Header"
+import HeroSection from "../components/Hero/HeroSection"
 
 const Home = () => {
   return (
-    <div className="w-full h-screen bg-[#120F17] flex justify-center">
+    <div className="w-full h-screen bg-[#120F17] flex">
       <Header />
+      <HeroSection />
       <ShapeGrid 
         speed={0.1}
         squareSize={50}

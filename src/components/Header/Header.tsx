@@ -3,7 +3,7 @@ import logo from "../../assets/logo.svg"
 const Header = () => {
   return (
     <div className="fixed top-5 left-1/2 -translate-x-1/2 
-            w-[90%] max-w-6xl
+            w-[90%] max-w-7xl
             bg-white/5
             backdrop-blur-md
             border border-white/10
