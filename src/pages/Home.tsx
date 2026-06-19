@@ -1,22 +1,17 @@
-import Galaxy from "../components/Galexy/Galaxy"
+import ShapeGrid from "../components/Galexy/ShapeGrid"
 import Header from "../components/Header/Header"
 
 const Home = () => {
   return (
-    <div className="w-full h-screen bg-[#120f16]">
-      <Galaxy 
-        mouseRepulsion={false}
-        mouseInteraction
-        density={2.4}
-        glowIntensity={0.1}
-        saturation={0}
-        hueShift={60}
-        twinkleIntensity={0.6}
-        rotationSpeed={0}
-        repulsionStrength={2.5}
-        autoCenterRepulsion={0}
-        starSpeed={0.2}
-        speed={0.5}
+    <div className="w-full h-screen bg-[#120F17]">
+      <ShapeGrid 
+        speed={0.1}
+        squareSize={40}
+        direction='diagonal' // up, down, left, right, diagonal
+        borderColor="#2F293A"
+        hoverFillColor='#222'
+        shape='square' // square, hexagon, circle, triangle
+        hoverTrailAmount={8} // number of trailing hovered shapes (0 = no trail)
       />
       <Header />
 

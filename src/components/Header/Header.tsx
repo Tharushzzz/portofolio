@@ -2,7 +2,7 @@
 
 const Header = () => {
   return (
-    <div>
+    <div className="w-[80%] h-28 bg-">
       
     </div>
   )
