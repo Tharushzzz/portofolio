@@ -9,7 +9,7 @@ const Header = () => {
             border border-white/10
             rounded-2xl
             shadow-lg
-            px-6 py-2 mt-4">
+            px-6 py-2 mt-4 z-10">
 
         <div className="flex items-center justify-between">
         

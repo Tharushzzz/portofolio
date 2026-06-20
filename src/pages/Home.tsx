@@ -2,9 +2,12 @@ import ShapeGrid from "../components/Galexy/ShapeGrid"
 import Header from "../components/Header/Header"
 import HeroSection from "../components/Hero/HeroSection"
 
+
+
 const Home = () => {
   return (
     <div className="w-full h-screen bg-[#120F17] flex">
+      
       <Header />
       <HeroSection />
       <ShapeGrid 
@@ -21,5 +24,7 @@ const Home = () => {
     </div>
   )
 }
+
+
 
 export default Home
