@@ -1,5 +1,6 @@
 import { TypeAnimation } from 'react-type-animation';
 import Lanyard from "../Lanyard/Lanyard"
+import { Download, Mail } from 'lucide-react';
 
 
 const HeroSection = () => {
@@ -46,6 +47,24 @@ const HeroSection = () => {
                     <span>about creating smooth user experiences and </span>
                     <span>scalable solutions.</span>
                 
+                </div>
+
+                <div className='flex gap-2 text-white/30'>
+                    <div className='px-4 py-1 rounded-2xl backdrop-blur-md border border-white/10 bg-white/5'>React.Js</div>
+                    <div className='px-4 py-1 rounded-2xl backdrop-blur-md border border-white/10 bg-white/5'>TypeScript</div>
+                    <div className='px-4 py-1 rounded-2xl backdrop-blur-md border border-white/10 bg-white/5'>Tailwind</div>
+                </div>
+
+                <div className='flex gap-4 text-white/60 font-bold cursor-pointer'>
+                    <div className='flex gap-2 px-4 py-2 bg-[#292929e8] rounded-2xl shadow-2xl hover:bg-[#464545e8] hover:text-white/80 cursor-pointer'>
+                        <button className='cursor-pointer'>Download CV </button>
+                        <Download />
+                    </div>
+                    
+                    <div className='flex gap-2 px-4 py-2 bg-[#292929e8] rounded-2xl shadow-2xl hover:bg-[#464545e8] hover:text-white/80 cursor-pointer'>
+                        <button className='cursor-pointer'>Contact </button>
+                        <Mail />
+                    </div>
                 </div>
 
             </div>
