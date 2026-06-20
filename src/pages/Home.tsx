@@ -6,7 +6,7 @@ import HeroSection from "../components/Hero/HeroSection"
 
 const Home = () => {
   return (
-    <div className="w-full h-screen bg-[#120F17] flex">
+    <div className="relative w-full h-screen overflow-x-hidden bg-[#120F17] flex">
       
       <Header />
       <HeroSection />

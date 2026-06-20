@@ -11,7 +11,7 @@ const Header = () => {
             shadow-lg
             px-6 py-2 mt-4 z-10">
 
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between sticky">
         
         
         <div className=" w-22.5">

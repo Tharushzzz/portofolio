@@ -6,7 +6,7 @@ import { Download, Mail } from 'lucide-react';
 const HeroSection = () => {
   return (
 
-    <div className='absolute w-screen h-screen flex justify-between'>
+    <div className='absolute inset-0 w-full h-screen overflow-x-hidden flex justify-between'>
 
         <div className="absolute ml-50 mt-50 flex flex-col gap-10">
 
@@ -72,7 +72,7 @@ const HeroSection = () => {
         </div>
 
 
-        <div className='w-2/3 absolute z-0 right-0'>
+        <div className='w-2/3 absolute z-0 right-0 overflow-hidden'>
             <Lanyard position={[0, 0, 15]} gravity={[0, -40, 0]} />
         </div>
 
