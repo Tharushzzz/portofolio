@@ -9,7 +9,7 @@ const Header = () => {
             border border-white/10
             rounded-2xl
             shadow-lg
-            px-6 py-2 mt-4 z-10">
+          px-6 py-2 mt-4 z-50">
 
         <div className="flex items-center justify-between sticky">
         
@@ -20,16 +20,16 @@ const Header = () => {
 
         
         <div className="flex items-center gap-8">
-            <a href="#" className="relative text-gray-300 hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+            <a href="#" className="relative text-gray-300 hover:text-white after:absolute after:content-[''] after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
               Home
             </a>
-            <a href="#" className="relative text-gray-300 hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+            <a href="#" className="relative text-gray-300 hover:text-white after:absolute after:content-[''] after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
               About
             </a>
-            <a href="#" className="relative text-gray-300 hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+            <a href="#" className="relative text-gray-300 hover:text-white after:absolute after:content-[''] after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
               Portfolio
             </a>
-            <a href="#" className="relative text-gray-300 hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+            <a href="#" className="relative text-gray-300 hover:text-white after:absolute after:content-[''] after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
               Contact
             </a>
 
