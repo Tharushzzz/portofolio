@@ -80,7 +80,7 @@ const Showcase = () => {
         }
 
   return (
-    <div id="showcase" className="relative w-full  overflow-hidden bg-[#120F17] -scroll-mt-19">
+    <div id="showcase" className="relative w-full  overflow-hidden bg-[#120F17] ">
         <div className="absolute inset-0 pointer-events-none">
             <ShapeGrid 
             speed={0.1}
@@ -94,7 +94,7 @@ const Showcase = () => {
         </div>
 
         {/* Show cases */}
-        <div className="relative w-full  mt-32 z-10 flex flex-col gap-10">
+        <div className="relative w-full  mt-5 z-10 flex flex-col gap-10">
 
             <div className="flex flex-col items-center justify-center gap-4">
                 <div className="text-5xl text-white scale-x-150 font-bold shadow-2xl shadow-white/30 px-4">Portfolio Showcase</div>

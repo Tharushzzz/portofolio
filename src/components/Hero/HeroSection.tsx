@@ -8,6 +8,8 @@ const HeroSection = () => {
 
     <div className='absolute inset-0 w-full h-screen overflow-x-hidden flex justify-between'>
 
+
+        {/* Left side */}
         <div className="absolute ml-50 mt-50 flex flex-col gap-10">
 
             <div className="text-6xl text-[#9d9d9d] font-bold flex flex-col gap-3 tracking-tighter scale-x-200 ml-21.75">
@@ -70,8 +72,9 @@ const HeroSection = () => {
             </div>
 
         </div>
+        
 
-
+        {/* right side  */}
         <div className='w-2/3 absolute z-0 right-0 overflow-hidden'>
             <Lanyard position={[0, 0, 15]} gravity={[0, -40, 0]} />
         </div>

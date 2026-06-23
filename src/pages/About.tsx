@@ -139,7 +139,7 @@ const About = () => {
 
             {/* profile image */}
 
-            <div className={`mt-40 ml-35 rounded-full bg-linear-to-br from-white/40 via-white/10 to-transparent p-0.75 shadow-[0_0_40px_rgba(255,255,255,0.12)] transition-all duration-1000 delay-200 ease-out ${isVisible ? "translate-y-0 scale-100 opacity-100" : "translate-y-16 scale-95 opacity-0"}`}>
+            <div className={`mt-30 ml-35 h-137.5 rounded-full bg-linear-to-br from-white/40 via-white/10 to-transparent p-0.75 shadow-[0_0_40px_rgba(255,255,255,0.12)] transition-all duration-1000 delay-200 ease-out ${isVisible ? "translate-y-0 scale-100 opacity-100" : "translate-y-16 scale-95 opacity-0"}`}>
                 <div className="h-90 w-90 overflow-hidden rounded-full border border-white/20 bg-[#1a1620]">
                     <img className="h-full w-full rounded-full object-cover object-center" src={myimage} alt="Tharusha Dilmin" />
                 </div>
