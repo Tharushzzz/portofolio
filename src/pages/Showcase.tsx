@@ -28,7 +28,32 @@ const projects = [
         image : portfolioImage 
 
     }
- ]
+]
+
+
+const certifications = [
+    {
+        title : "Web Development Certification",
+        description : "asdasdasdasdasdasdsad",
+        skils : ["UI/UX","React","TS"],
+        image : portfolioImage
+    },
+    {
+        title : "Web Development Certification",
+        description : "asdasdasdasdasdasdsad",
+        skils : ["UI/UX","React","TS"],
+        image : portfolioImage
+    },
+    {
+        title : "Web Development Certification",
+        description : "asdasdasdasdasdasdsad",
+        skils : ["UI/UX","React","TS"],
+        image : portfolioImage
+    }
+]
+
+
+
 
 
 const Showcase = () => {
@@ -93,7 +118,10 @@ const Showcase = () => {
                         ) )
                         
                     ) : (
-                        <Certificates />
+                        certifications.map(certificat => (
+                            <Certificates title={certificat.title} description={certificat.description} skils={certificat.skils} image={certificat.image} />
+                        ))
+                        
                     )}
                 </div>
 
