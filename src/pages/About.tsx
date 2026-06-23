@@ -49,7 +49,7 @@ const About = () => {
     }, [])
 
   return (
-        <div ref={sectionRef} id="about" className="relative w-full min-h-screen overflow-hidden bg-[#120F17]">
+        <div ref={sectionRef} id="about" className="relative w-full min-h-screen overflow-hidden bg-[#120F17] -scroll-mt-19">
         <div className="absolute inset-0 pointer-events-none">
             <ShapeGrid 
             speed={0.1}

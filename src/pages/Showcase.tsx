@@ -80,7 +80,7 @@ const Showcase = () => {
         }
 
   return (
-    <div id="showcase" className="relative w-full  overflow-hidden bg-[#120F17]">
+    <div id="showcase" className="relative w-full  overflow-hidden bg-[#120F17] -scroll-mt-19">
         <div className="absolute inset-0 pointer-events-none">
             <ShapeGrid 
             speed={0.1}
