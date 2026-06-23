@@ -3,13 +3,32 @@ import ShapeGrid from "../components/Galexy/ShapeGrid"
 import { useState } from "react"
 import Project from "../components/Showcase/Project"
 import Certificates from "../components/Showcase/Certificates"
+import portfolioImage from "../assets/projectimages/protfolio.png"
 
 
-// const project = [
-//     {
-//         title = "Interactive Portfolio Site"
-//     }
-// ]
+const projects = [
+    {
+        title : "Interactive Portfolio Site",
+        discription : "asdasdasdasdsadsadasd",
+        technologies : ["React","Tailwind css","TypeScript"],
+        image : portfolioImage 
+
+    },
+    {
+        title : "Interactive Portfolio Site",
+        discription : "asdasdasdasdsadsadasd",
+        technologies : ["React","Tailwind css","TypeScript"] ,
+        image : portfolioImage
+
+    },
+    {
+        title : "Interactive Portfolio Site",
+        discription : "asdasdasdasdsadsadasd",
+        technologies : ["React","Tailwind css","TypeScript"],
+        image : portfolioImage 
+
+    }
+ ]
 
 
 const Showcase = () => {
@@ -67,9 +86,12 @@ const Showcase = () => {
 
                 {/* project card */}
 
-                <div className="flex w-full max-w-5xl flex-1 justify-center mt-10 mb-7">
+                <div className="flex w-full max-w-5xl flex-1 flex-col gap-10 justify-center mt-10 mb-7">
                     {activeTab === "project" ? (
-                        <Project />
+                        projects.map(project => (
+                            <Project title={project.title} description={project.title} technologies={project.technologies} image={project.image} />
+                        ) )
+                        
                     ) : (
                         <Certificates />
                     )}
