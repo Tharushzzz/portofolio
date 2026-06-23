@@ -4,6 +4,7 @@ import  github  from "../assets/github.png"
 import  linkdin  from "../assets/linkdin.png"
 import instagram from "../assets/instagram.png"
 import facebook from "../assets/facebook.png"
+import myimage from "../assets/myimage.png"
 
 import LogoLoop from '../components/logoloop/Logoloop'
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
@@ -34,14 +35,15 @@ const About = () => {
 
         <div className="relative z-10 flex text-white p-6 w-full h-full">
 
-            <div className="flex flex-col mt-30 ml-20">
+            {/* left side */}
+            <div className="flex flex-col mt-30 ml-20 w-1/2">
                 <div className="text-[#b6b6b6] text-sm">ABOUT ME</div>
-                <div className="flex flex-col gap-5 mt-6 text-5xl font-serif scale-x-120 ml-30 font-bold text-[#c8c8c8f7]">
+                <div className="flex flex-col gap-5 mt-6 text-5xl font-serif scale-x-120 ml-15 font-bold text-[#c8c8c8f7]">
                     <div>THARUSHA DILMIN</div>
                     <div>ABEYGUNASEKARA</div>
                 </div>
 
-                <div className="w-2/4 text-sm mt-8 text-white/60">
+                <div className="w-full text-sm mt-8 text-white/60">
                     I am an undergraduate pursuing a Bachelor of Information and Communication Technology (BICT) degree at the University of Colombo. I have a strong interest in web development, cybersecurity, and modern software technologies. I enjoy building responsive and user-friendly applications while continuously improving my programming and problem-solving skills. I am eager to learn new technologies, expand my expertise, and contribute to innovative projects that create real-world impact.
                 </div>
 
@@ -105,6 +107,17 @@ const About = () => {
                 </div>
 
             </div>
+
+            {/* profile image */}
+
+            <div className="mt-40 ml-35 rounded-full bg-linear-to-br from-white/40 via-white/10 to-transparent p-0.75 shadow-[0_0_40px_rgba(255,255,255,0.12)]">
+                <div className="h-90 w-90 overflow-hidden rounded-full border border-white/20 bg-[#1a1620]">
+                    <img className="h-full w-full rounded-full object-cover object-center" src={myimage} alt="Tharusha Dilmin" />
+                </div>
+            </div>
+
+
+
         </div>
 
     </div>
