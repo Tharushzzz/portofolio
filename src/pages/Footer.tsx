@@ -1,7 +1,7 @@
 
 const Footer = () => {
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-[#0f0c14] px-6 py-14 text-white">
+    <footer id="footer" className="relative overflow-hidden border-t border-white/10 bg-[#0f0c14] px-6 py-14 text-white">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-xl">
           <div className="mb-4 inline-flex rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-cyan-200">

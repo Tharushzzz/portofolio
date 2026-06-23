@@ -20,16 +20,16 @@ const Header = () => {
 
         
         <div className="flex items-center gap-8">
-            <a href="#" className="relative text-gray-300 hover:text-white after:absolute after:content-[''] after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+            <a href="#home" className="relative text-gray-300 hover:text-white after:absolute after:content-[''] after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
               Home
             </a>
-            <a href="#" className="relative text-gray-300 hover:text-white after:absolute after:content-[''] after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+            <a href="#about" className="relative text-gray-300 hover:text-white after:absolute after:content-[''] after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
               About
             </a>
-            <a href="#" className="relative text-gray-300 hover:text-white after:absolute after:content-[''] after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+            <a href="#showcase" className="relative text-gray-300 hover:text-white after:absolute after:content-[''] after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
               Portfolio
             </a>
-            <a href="#" className="relative text-gray-300 hover:text-white after:absolute after:content-[''] after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+            <a href="#footer" className="relative text-gray-300 hover:text-white after:absolute after:content-[''] after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
               Contact
             </a>
 
