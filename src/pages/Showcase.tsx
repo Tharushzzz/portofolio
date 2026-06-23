@@ -9,21 +9,21 @@ import portfolioImage from "../assets/projectimages/protfolio.png"
 const projects = [
     {
         title : "Interactive Portfolio Site",
-        discription : "asdasdasdasdsadsadasd",
+        description : "asdasdasdasdsadsadasd",
         technologies : ["React","Tailwind css","TypeScript"],
         image : portfolioImage 
 
     },
     {
         title : "Interactive Portfolio Site",
-        discription : "asdasdasdasdsadsadasd",
+        description : "asdasdasdasdsadsadasd",
         technologies : ["React","Tailwind css","TypeScript"] ,
         image : portfolioImage
 
     },
     {
         title : "Interactive Portfolio Site",
-        discription : "asdasdasdasdsadsadasd",
+        description : "asdasdasdasdsadsadasd",
         technologies : ["React","Tailwind css","TypeScript"],
         image : portfolioImage 
 
@@ -40,13 +40,13 @@ const certifications = [
     },
     {
         title : "Web Development Certification",
-        description : "asdasdasdasdasdasdsad",
+        description : "asdasdasdasdasdasdsadsattt",
         skils : ["UI/UX","React","TS"],
         image : portfolioImage
     },
     {
         title : "Web Development Certification",
-        description : "asdasdasdasdasdasdsad",
+        description : "asdasdasdasdasdasdsadttt",
         skils : ["UI/UX","React","TS"],
         image : portfolioImage
     }
@@ -58,6 +58,26 @@ const certifications = [
 
 const Showcase = () => {
         const [activeTab, setActiveTab] = useState<"project" | "certificate">("project")
+        const [visibleCount, setVisibleCount] = useState({
+            project: 2,
+            certificate: 2,
+        })
+
+        const visibleProjects = projects.slice(0, visibleCount.project)
+        const visibleCertifications = certifications.slice(0, visibleCount.certificate)
+        const hasMoreItems = activeTab === "project"
+            ? visibleCount.project < projects.length
+            : visibleCount.certificate < certifications.length
+
+        const handleSeeMore = () => {
+            setVisibleCount((previous) => ({
+                ...previous,
+                [activeTab]: Math.min(
+                    previous[activeTab] + 2,
+                    activeTab === "project" ? projects.length : certifications.length
+                ),
+            }))
+        }
 
   return (
     <div className="relative w-full  overflow-hidden bg-[#120F17]">
@@ -113,15 +133,39 @@ const Showcase = () => {
 
                 <div className="flex w-full max-w-5xl flex-1 flex-col gap-10 justify-center mt-10 mb-7">
                     {activeTab === "project" ? (
-                        projects.map(project => (
-                            <Project title={project.title} description={project.title} technologies={project.technologies} image={project.image} />
+                        visibleProjects.map((project, index) => (
+                            <Project
+                                key={`${project.title}-${index}`}
+                                title={project.title}
+                                description={project.description}
+                                technologies={project.technologies}
+                                image={project.image}
+                            />
                         ) )
                         
                     ) : (
-                        certifications.map(certificat => (
-                            <Certificates title={certificat.title} description={certificat.description} skils={certificat.skils} image={certificat.image} />
+                        visibleCertifications.map((certificat, index) => (
+                            <Certificates
+                                key={`${certificat.title}-${index}`}
+                                title={certificat.title}
+                                description={certificat.description}
+                                skils={certificat.skils}
+                                image={certificat.image}
+                            />
                         ))
                         
+                    )}
+
+                    {hasMoreItems && (
+                        <div className="flex justify-center pt-2">
+                            <button
+                                type="button"
+                                onClick={handleSeeMore}
+                                className="rounded-full border border-cyan-400/25 bg-cyan-400/10 px-6 py-3 text-sm font-semibold tracking-[0.18em] text-cyan-100 transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-400/20 hover:text-white"
+                            >
+                                See More
+                            </button>
+                        </div>
                     )}
                 </div>
 
