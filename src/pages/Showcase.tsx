@@ -1,6 +1,6 @@
 
 import ShapeGrid from "../components/Galexy/ShapeGrid"
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Project from "../components/Showcase/Project"
 import Certificates from "../components/Showcase/Certificates"
 import portfolioImage from "../assets/projectimages/protfolio.png"
@@ -79,8 +79,38 @@ const Showcase = () => {
             }))
         }
 
+        const sectionRef = useRef<HTMLDivElement | null>(null)
+                const [isVisible, setIsVisible] = useState(false)
+            
+                useEffect(() => {
+                    const sectionElement = sectionRef.current
+            
+                    if (!sectionElement) {
+                        return
+                    }
+            
+                    const observer = new IntersectionObserver(
+                        ([entry]) => {
+                            if (entry.isIntersecting) {
+                                setIsVisible(true)
+                                observer.disconnect()
+                            }
+                        },
+                        {
+                            threshold: 0.25,
+                            rootMargin: "0px 0px -10% 0px",
+                        }
+                    )
+            
+                    observer.observe(sectionElement)
+            
+                    return () => observer.disconnect()
+            }, [])
+
+
+
   return (
-    <div id="showcase" className="relative w-full  overflow-hidden bg-[#120F17] ">
+    <div ref={sectionRef} id="showcase" className="relative w-full  overflow-hidden bg-[#120F17] ">
         <div className="absolute inset-0 pointer-events-none">
             <ShapeGrid 
             speed={0.1}
@@ -96,14 +126,14 @@ const Showcase = () => {
         {/* Show cases */}
         <div className="relative w-full  mt-5 z-10 flex flex-col gap-10">
 
-            <div className="flex flex-col items-center justify-center gap-4">
+            <div className={`flex flex-col items-center justify-center gap-4 transition-all duration-1000 ease-out ${isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
                 <div className="text-5xl text-white scale-x-150 font-bold shadow-2xl shadow-white/30 px-4">Portfolio Showcase</div>
                 <div className="text-md text-white/60 ">Explore journey through projects and cetification expertise.Each section a milistone in my continuous learning path.</div>
             </div>
 
             <div className="flex flex-1 mx-30 items-center flex-col">
                 {/* change btn */}
-                <div className="flex w-full max-w-xl items-center gap-3 rounded-full border border-white/15 bg-black/60 p-2 shadow-[0_0_40px_rgba(0,0,0,0.35)] backdrop-blur-md sm:w-2/4">
+                <div className={`flex w-full max-w-xl items-center gap-3 rounded-full border border-white/15 bg-black/60 p-2 shadow-[0_0_40px_rgba(0,0,0,0.35)] backdrop-blur-md sm:w-2/4 transition-all duration-1000 ease-out ${isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
                     <button
                         type="button"
                         onClick={() => setActiveTab("project")}
@@ -131,7 +161,7 @@ const Showcase = () => {
 
                 {/* project card */}
 
-                <div className="flex w-full max-w-5xl flex-1 flex-col gap-10 justify-center mt-10 mb-7">
+                <div className={`flex w-full max-w-5xl flex-1 flex-col gap-10 justify-center mt-10 mb-7 transition-all duration-1000 ease-out ${isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
                     {activeTab === "project" ? (
                         visibleProjects.map((project, index) => (
                             <Project
@@ -151,6 +181,7 @@ const Showcase = () => {
                                 description={certificat.description}
                                 skils={certificat.skils}
                                 image={certificat.image}
+        
                             />
                         ))
                         
