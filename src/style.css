@@ -15,4 +15,6 @@
 body {
   font-family: sans-serif;
   overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  user-select: none;
 }
