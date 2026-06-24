@@ -90,13 +90,13 @@ const About = () => {
                         <img src={linkdin} className="h-8 w-8 object-contain" alt="LinkedIn" />
                     </a>
                     <a
-                        href=""
+                        href="https://www.instagram.com/__tharuu__sha_"
                         className="flex h-13 w-13 items-center justify-center rounded-full border border-white/15 bg-white/30 transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/10 hover:shadow-lg hover:shadow-black/30"
                     >
                         <img src={instagram} className="h-8 w-8 object-contain" alt="Instagram" />
                     </a>
                     <a
-                        href=""
+                        href="https://www.facebook.com/tharusha.dilmin.96"
                         className="flex h-13 w-13 items-center justify-center rounded-full border border-white/15 bg-white/30 transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/10 hover:shadow-lg hover:shadow-black/30"
                     >
                         <img src={facebook} className="h-8 w-8 object-contain" alt="Instagram" />
