@@ -92,9 +92,10 @@ const HeroSection = () => {
 
                 <div className={`flex gap-4 text-white/60 font-bold cursor-pointer transition-all duration-1000 ease-out ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
                     <div className='flex gap-2 px-4 py-2 bg-[#292929e8] rounded-2xl shadow-2xl hover:bg-[#464545e8] hover:text-white/80 cursor-pointer'>
-                        <button className='cursor-pointer'>Download CV </button>
+                        <a href="../../../public/T.D_Abeygunasekara.pdf" download className='cursor-pointer'>Download CV </a>
                         <Download />
                     </div>
+                    
                     
                     <div className='flex gap-2 px-4 py-2 bg-[#292929e8] rounded-2xl shadow-2xl hover:bg-[#464545e8] hover:text-white/80 cursor-pointer'>
                         <button className='cursor-pointer'>Contact </button>
