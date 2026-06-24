@@ -40,9 +40,9 @@ const Footer = () => {
               Links
             </div>
             <div className="mt-4 space-y-3 text-sm text-white/75">
-              <a href="#" className="block transition hover:text-cyan-200">Home</a>
-              <a href="#" className="block transition hover:text-cyan-200">About</a>
-              <a href="#" className="block transition hover:text-cyan-200">Showcase</a>
+              <a href="#home" className="block transition hover:text-cyan-200">Home</a>
+              <a href="#about" className="block transition hover:text-cyan-200">About</a>
+              <a href="#showcase" className="block transition hover:text-cyan-200">Showcase</a>
             </div>
           </div>
         </div>
