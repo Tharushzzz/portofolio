@@ -97,9 +97,12 @@ const HeroSection = () => {
                     </div>
                     
                     
-                    <div className='flex gap-2 px-4 py-2 bg-[#292929e8] rounded-2xl shadow-2xl hover:bg-[#464545e8] hover:text-white/80 cursor-pointer'>
-                        <button className='cursor-pointer'>Contact </button>
-                        <Mail />
+                    <div className='flex  px-4 py-2 bg-[#292929e8] rounded-2xl shadow-2xl hover:bg-[#464545e8] hover:text-white/80 cursor-pointer'>
+                        <a href="mailto:tharushadilmin123@gmail.com" className='flex gap-2'>
+                            <button className='cursor-pointer'>Contact </button>
+                            <Mail />
+                        </a>
+                        
                     </div>
                 </div>
 
