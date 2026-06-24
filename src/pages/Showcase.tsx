@@ -3,55 +3,13 @@ import ShapeGrid from "../components/Galexy/ShapeGrid"
 import { useEffect, useRef, useState } from "react"
 import Project from "../components/Showcase/Project"
 import Certificates from "../components/Showcase/Certificates"
-import portfolioImage from "../assets/projectimages/protfolio.png"
+import projectDetails from "../assets/projectDetails/projectDetails"
+import CertificatDetails from "../assets/certificatDetails/CertificatDetails"
 
 
-const projects = [
-    {
-        title : "Interactive Portfolio Site",
-        description : "asdasdasdasdsadsadasd",
-        technologies : ["React","Tailwind css","TypeScript"],
-        image : portfolioImage 
+const projects = projectDetails().projects
 
-    },
-    {
-        title : "Interactive Portfolio Site",
-        description : "asdasdasdasdsadsadasd",
-        technologies : ["React","Tailwind css","TypeScript"] ,
-        image : portfolioImage
-
-    },
-    {
-        title : "Interactive Portfolio Site",
-        description : "asdasdasdasdsadsadasd",
-        technologies : ["React","Tailwind css","TypeScript"],
-        image : portfolioImage 
-
-    }
-]
-
-
-const certifications = [
-    {
-        title : "Web Development Certification",
-        description : "asdasdasdasdasdasdsad",
-        skils : ["UI/UX","React","TS"],
-        image : portfolioImage
-    },
-    {
-        title : "Web Development Certification",
-        description : "asdasdasdasdasdasdsadsattt",
-        skils : ["UI/UX","React","TS"],
-        image : portfolioImage
-    },
-    {
-        title : "Web Development Certification",
-        description : "asdasdasdasdasdasdsadttt",
-        skils : ["UI/UX","React","TS"],
-        image : portfolioImage
-    }
-]
-
+const certifications = CertificatDetails().certifications
 
 
 
@@ -170,6 +128,8 @@ const Showcase = () => {
                                 description={project.description}
                                 technologies={project.technologies}
                                 image={project.image}
+                                live={project.live}
+                                github={project.github}
                             />
                         ) )
                         
