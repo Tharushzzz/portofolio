@@ -1,24 +1,57 @@
 import { TypeAnimation } from 'react-type-animation';
 import Lanyard from "../Lanyard/Lanyard"
 import { Download, Mail } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 
 
 const HeroSection = () => {
+
+    const sectionRef = useRef<HTMLDivElement | null>(null)
+        const [isVisible, setIsVisible] = useState(false)
+    
+        useEffect(() => {
+            const sectionElement = sectionRef.current
+    
+            if (!sectionElement) {
+                return
+            }
+    
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting) {
+                        setIsVisible(true)
+                        observer.disconnect()
+                    }
+                },
+                {
+                    threshold: 0.25,
+                    rootMargin: "0px 0px -10% 0px",
+                }
+            )
+    
+            observer.observe(sectionElement)
+    
+            return () => observer.disconnect()
+        }, [])
+
+
+
+
   return (
 
-    <div className='absolute inset-0 w-full h-screen overflow-x-hidden flex justify-between'>
+    <div  className='absolute inset-0 w-full h-screen overflow-x-hidden flex justify-between'>
 
 
         {/* Left side */}
-        <div className="absolute ml-50 mt-50 flex flex-col gap-10">
+        <div ref={sectionRef}  className={`absolute ml-50 mt-50 flex flex-col gap-10 transition-all duration-1000 ease-out ${isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
 
-            <div className="text-6xl text-[#9d9d9d] font-bold flex flex-col gap-3 tracking-tighter scale-x-200 ml-21.75">
+            <div className={`text-6xl text-[#9d9d9d] font-bold flex flex-col gap-3 tracking-tighter scale-x-200 ml-21.75 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
                     <div className="text-white/80">Software</div>  
                     <div className="pl-4">Developer</div>
             </div>
 
             <div className='flex gap-5 flex-col -ml-2.5'>
-                <div className='w-full text-[#737171] text-[8px] '>
+                <div className={`w-full text-[#737171] text-[8px] transition-all duration-1000 ease-out ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
                     <TypeAnimation
                         sequence={[
                                 // Same substring at the start will only be typed out once, initially
@@ -43,7 +76,7 @@ const HeroSection = () => {
                     />
                 </div>
 
-                <div className='w-100 text-m text-[#b7b7b7] tracking-widest flex flex-col gap-2' >
+                <div className={`w-100 text-m text-[#b7b7b7] tracking-widest flex flex-col gap-2 transition-all duration-1000 ease-out ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`} >
                     <span>I build modern, responsive web applications</span>
                     <span>using clean and efficient code. Passionate </span>
                     <span>about creating smooth user experiences and </span>
@@ -51,13 +84,13 @@ const HeroSection = () => {
                 
                 </div>
 
-                <div className='flex gap-2 text-white/30'>
+                <div className={`flex gap-2 text-white/30 transition-all duration-1000 ease-out ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
                     <div className='px-4 py-1 rounded-2xl backdrop-blur-md border border-white/10 bg-white/5'>React.Js</div>
                     <div className='px-4 py-1 rounded-2xl backdrop-blur-md border border-white/10 bg-white/5'>TypeScript</div>
                     <div className='px-4 py-1 rounded-2xl backdrop-blur-md border border-white/10 bg-white/5'>Tailwind</div>
                 </div>
 
-                <div className='flex gap-4 text-white/60 font-bold cursor-pointer'>
+                <div className={`flex gap-4 text-white/60 font-bold cursor-pointer transition-all duration-1000 ease-out ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
                     <div className='flex gap-2 px-4 py-2 bg-[#292929e8] rounded-2xl shadow-2xl hover:bg-[#464545e8] hover:text-white/80 cursor-pointer'>
                         <button className='cursor-pointer'>Download CV </button>
                         <Download />

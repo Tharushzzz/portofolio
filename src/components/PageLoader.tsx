@@ -4,7 +4,7 @@ const PageLoader = () => {
       role="status"
       aria-live="polite"
       aria-label="Loading content"
-      className="fixed inset-0 z-50 flex items-center justify-center bg-[#120F17]/30 backdrop-blur-2xl backdrop-saturate-150"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-[#120F17] backdrop-blur-2xl backdrop-saturate-150"
     >
       <div className="flex flex-col items-center gap-5 rounded-3xl border border-white/10 bg-[#120F17]/55 px-8 py-10 shadow-[0_0_60px_rgba(0,0,0,0.45)]">
         <div className="relative h-16 w-16">
