@@ -5,9 +5,10 @@ type certificatesProps = {
     description : string;
     skils : string[];
     image :string;
+    certificateLink : string;
 }
 
-const Certificates = ({title, description, skils, image }: certificatesProps) => {
+const Certificates = ({title, description, skils, image, certificateLink }: certificatesProps) => {
   return (
     <div className="grid w-full gap-6 rounded-4xl border border-white/10 bg-white/5 p-6 shadow-[0_0_60px_rgba(0,0,0,0.35)] backdrop-blur-md md:grid-cols-[0.95fr_1.05fr] md:p-8">
         <div className="grid place-items-center rounded-3xl border border-white/10 bg-black/30 p-6">
@@ -34,8 +35,16 @@ const Certificates = ({title, description, skils, image }: certificatesProps) =>
 
                     
                 </div>
-            </div>
+                <div>
+                    <a href={certificateLink} className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 transition hover:text-cyan-300">
+                        View Certificate
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-4 w-4">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                        </svg>
+                    </a>
+                </div>
         </div>
+    </div>
   )
 }
 

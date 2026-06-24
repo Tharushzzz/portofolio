@@ -141,7 +141,7 @@ const Showcase = () => {
                                 description={certificat.description}
                                 skils={certificat.skils}
                                 image={certificat.image}
-        
+                                certificateLink={certificat.certificateLink}
                             />
                         ))
                         
