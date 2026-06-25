@@ -1,73 +1,116 @@
-# React + TypeScript + Vite
+# 🌐 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website! This project showcases my skills, projects, education, and experience as an undergraduate student passionate about web development, cybersecurity, and modern technologies.
 
-Currently, two official plugins are available:
+🔗 Live Demo: https://tharushadilmin.netlify.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📖 About The Project
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This portfolio website was designed and developed to create a professional online presence and showcase my work, technical skills, and achievements. The website features a modern UI, smooth animations, responsive design, and interactive sections.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- 🎨 Modern and Responsive Design
+- 🌙 Smooth Animations and Transitions
+- 👨‍💻 About Me Section
+- 🛠️ Skills Showcase
+- 📂 Project Portfolio
+- 📄 Downloadable CV
+- 📱 Mobile-Friendly Layout
+- 📬 Contact Section
+- ⚡ Fast Performance
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Technologies Used
+
+### Frontend
+- React.js
+- TypeScript
+- Tailwind CSS
+- HTML5
+- CSS3
+
+### Tools
+- Git
+- GitHub
+- VS Code
+- Figma
+- Netlify
+
+---
+
+## 📂 Project Structure
+
+```bash
+portfolio/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── styles/
+│   └── App.tsx
+├── package.json
+├── tailwind.config.js
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Installation
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/portfolio.git
 ```
+
+Navigate to the project folder:
+
+```bash
+cd portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## 📸 Screenshots
+
+<img width="1743" height="853" alt="Screenshot 2026-06-23 191933" src="https://github.com/user-attachments/assets/c86b079c-ed94-4aea-9993-d4a08d62a0bc" />
+
+---
+
+## 🎯 Future Improvements
+
+- Add Dark/Light Theme Toggle
+- Add Blog Section
+- Integrate Backend Contact Form
+- Add Project Filtering
+- Improve Accessibility
+
+---
+
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
+
+---
+
+⭐ If you like this project, feel free to give it a star on GitHub!
